@@ -1,5 +1,5 @@
 import { Heading } from "@chakra-ui/react";
-import "./styles.module.scss";
+import styles from "./styles.module.scss";
 import ImageGithub from "../../assets/github.png";
 import ImageLinkedin from "../../assets/linkedin.png";
 export default function Header() {
@@ -7,8 +7,8 @@ export default function Header() {
   const linkedin = ImageLinkedin;
 
   return (
-    <header>
-      <Heading>Redux Learning</Heading>
+    <header className={styles.header}>
+      <Heading className={styles.h1}>Redux Learning</Heading>
       <nav>
         <ul>
           <li>

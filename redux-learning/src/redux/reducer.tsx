@@ -8,9 +8,11 @@ export const ModalConfig = createSlice({
   reducers: {
     openModal: (state: { value: boolean }) => {
       state.value = true;
+      // setModal(true);
     },
     CloseModal: (state: { value: boolean }) => {
       state.value = false;
+      // setModal(false);
     },
   },
 });

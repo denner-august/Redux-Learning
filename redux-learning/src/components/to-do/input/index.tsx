@@ -1,10 +1,13 @@
-import { Input, Button } from "@chakra-ui/react";
+import styles from "./styles.module.scss";
+
+import { Input, Button, Stack } from "@chakra-ui/react";
 
 export default function InputValue() {
   return (
-    <div className="ContentMain">
+    <div className={styles.Container}>
       <Input
-        w="40%"
+        minWidth={200}
+        w="60%"
         bgColor="#251d35"
         color="white"
         placeholder="Basic usage"
@@ -13,7 +16,9 @@ export default function InputValue() {
         }
       />
 
-      <Button colorScheme="pink">Button</Button>
+      <Button flex={1} colorScheme="pink">
+        Button
+      </Button>
     </div>
   );
 }

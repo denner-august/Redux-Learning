@@ -8,7 +8,7 @@ import { mode } from "@chakra-ui/theme-tools";
 
 import { Provider } from "react-redux";
 import store from "./redux/store";
-import GlobalStyle from "./styles/globa";
+import "./styles/global.scss";
 
 const theme = extendTheme({
   styles: {
@@ -25,7 +25,6 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
     <ChakraProvider theme={theme}>
       <Provider store={store}>
         <App />
-        <GlobalStyle />
       </Provider>
     </ChakraProvider>
   </React.StrictMode>

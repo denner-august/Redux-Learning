@@ -1,0 +1,21 @@
+.Container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  
+
+    min-height: 50px;
+    height: auto;
+    width: auto;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0px 10px;
+
+}
+
+@media screen and (max-width: 470px) {
+    .Container{
+        max-width: 100%;
+    }
+}
+
