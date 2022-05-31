@@ -1,3 +1,9 @@
+import "./styles.module.scss";
+import Input from "./input/index";
 export default function ListToDo() {
-  return <h2>teste</h2>;
+  return (
+    <main>
+      <Input />
+    </main>
+  );
 }
