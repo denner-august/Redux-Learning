@@ -1,8 +1,11 @@
 import styles from "./styles.module.scss";
 
 import { Input, Button, Stack } from "@chakra-ui/react";
+import { useState } from "react";
 
 export default function InputValue() {
+  const [inputValueChange, setInputValue] = useState("");
+
   return (
     <div className={styles.Container}>
       <Input
@@ -12,11 +15,15 @@ export default function InputValue() {
         color="white"
         placeholder="Basic usage"
         onChange={(event: { target: { value: string } }) =>
-          console.log(event.target.value)
+          setInputValue(event.target.value)
         }
       />
 
-      <Button flex={1} colorScheme="pink">
+      <Button
+        flex={1}
+        colorScheme="pink"
+        onClick={() => console.log(inputValueChange)}
+      >
         Button
       </Button>
     </div>

@@ -1,0 +1,55 @@
+.Container{
+    background-color: rgb(243, 243, 243);
+
+    width: 100%;
+    height: auto;
+
+
+    ul{
+        display: flex;
+        flex-direction: column;
+
+        .EstiloDaLista{
+
+            li{
+                width: 40%;
+                text-align: center;
+            }
+
+            width: 100%;
+            max-width: 70%;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding: 5px 0px;
+
+            color: white;
+            background-color: rgb(109, 101, 109);
+            border-radius: 10px;
+
+
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+    button{
+        background-color: rgb(223, 28, 28);
+        height: 50px;
+        width: 100px;
+        border-radius: 5px;
+        color: white;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .Container{
+        ul{
+            .EstiloDaLista{
+                max-width: 89%;
+            }
+        }
+    }
+}
