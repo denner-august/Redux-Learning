@@ -12,8 +12,6 @@ export default function App() {
     (state: { configModal: { value: boolean } }) => state.configModal
   );
 
-  console.log(count.value);
-
   useEffect(() => {
     setTimeout(() => {
       dispatch(openModal());
