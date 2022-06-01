@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { removeItemList } from "../../../redux/reducerList";
 
 export default function ListaAsTarefas() {
-  const list = useSelector(
+  const arrayList = useSelector(
     (state: { ListConfig: { tarefas: string[] } }) => state.ListConfig.tarefas
   );
 
@@ -12,7 +12,7 @@ export default function ListaAsTarefas() {
   return (
     <div className={styles.Container}>
       <ul>
-        {list.map((tarefa) => {
+        {arrayList.map((tarefa) => {
           return (
             <div key={tarefa} className={styles.EstiloDaLista}>
               <li>{tarefa}</li>
