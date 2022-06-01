@@ -1,15 +1,28 @@
 import styles from "./styles.module.scss";
+import { useSelector, useDispatch } from "react-redux";
+import { removeItemList } from "../../../redux/reducerList";
+
 export default function ListaAsTarefas() {
-  const tarefas = ["notebook", "mouse", "teclado", "monitor", "memoria", "hd"];
+  const list = useSelector(
+    (state: { ListConfig: { tarefas: string[] } }) => state.ListConfig.tarefas
+  );
+
+  const dispath = useDispatch();
 
   return (
     <div className={styles.Container}>
       <ul>
-        {tarefas.map((tarefa) => {
+        {list.map((tarefa) => {
           return (
-            <div className={styles.EstiloDaLista}>
-              <li key={tarefa}>{tarefa}</li>
-              <button onClick={() => console.log(tarefa)}>Excluir</button>
+            <div key={tarefa} className={styles.EstiloDaLista}>
+              <li>{tarefa}</li>
+              <button
+                onClick={() => {
+                  dispath(removeItemList(tarefa));
+                }}
+              >
+                Excluir
+              </button>
             </div>
           );
         })}

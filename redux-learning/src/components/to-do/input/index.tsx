@@ -1,10 +1,18 @@
 import styles from "./styles.module.scss";
+import { useDispatch } from "react-redux";
+import { addItemList } from "../../../redux/reducerList";
 
-import { Input, Button, Stack } from "@chakra-ui/react";
+import { Input, Button } from "@chakra-ui/react";
 import { useState } from "react";
 
 export default function InputValue() {
   const [inputValueChange, setInputValue] = useState("");
+
+  const dispath = useDispatch();
+
+  const listItemName = () => {
+    dispath(addItemList(inputValueChange));
+  };
 
   return (
     <div className={styles.Container}>
@@ -19,11 +27,7 @@ export default function InputValue() {
         }
       />
 
-      <Button
-        flex={1}
-        colorScheme="pink"
-        onClick={() => console.log(inputValueChange)}
-      >
+      <Button flex={1} colorScheme="pink" onClick={listItemName}>
         Button
       </Button>
     </div>
