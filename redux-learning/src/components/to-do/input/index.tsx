@@ -14,6 +14,13 @@ export default function InputValue() {
     dispath(addItemList(inputValueChange));
   };
 
+  function handleChange() {
+    if (inputValueChange === "") {
+      return;
+    }
+    listItemName();
+  }
+
   return (
     <div className={styles.Container}>
       <Input
@@ -21,14 +28,14 @@ export default function InputValue() {
         w="60%"
         bgColor="#251d35"
         color="white"
-        placeholder="Basic usage"
+        placeholder="De um nome a tarefa"
         onChange={(event: { target: { value: string } }) =>
           setInputValue(event.target.value)
         }
       />
 
-      <Button flex={1} colorScheme="pink" onClick={listItemName}>
-        Button
+      <Button flex={1} colorScheme="pink" onClick={handleChange}>
+        Registrar
       </Button>
     </div>
   );

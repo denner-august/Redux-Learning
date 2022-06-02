@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const ModalConfig = createSlice({
   name: "modal",
   initialState: {
-    value: true,
+    value: false,
   },
   reducers: {
     openModal: (state: { value: boolean }) => {
